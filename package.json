@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/watchify/bin/cmd.js -v -t babelify js/app.js -o dist/bundle.js",
+    "develop": "browser-sync start --files 'dist/bundle.js, index.html' --proxy 'http://localhost:8000'"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "babelify": "^6.1.2",
     "browserify": "^10.2.4",
+    "react": "^0.13.3",
     "watchify": "^3.2.2"
   }
 }
