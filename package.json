@@ -1,7 +1,7 @@
 {
   "name": "react-with-babel",
   "version": "1.0.0",
-  "description": "",
+  "description": "React with Babel and npm as build-system",
   "main": "index.js",
   "scripts": {
     "local-ws": "./node_modules/local-web-server/bin/ws.js",
@@ -9,7 +9,7 @@
     "build": "./node_modules/watchify/bin/cmd.js -v -t babelify js/app.js -o dist/bundle.js",
     "develop": "npm run build & npm run local-ws & npm run browser-sync"
   },
-  "author": "",
+  "author": "René Viering",
   "license": "MIT",
   "devDependencies": {
     "babelify": "^6.1.2",
