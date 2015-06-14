@@ -7,7 +7,7 @@
     "local-ws": "./node_modules/local-web-server/bin/ws.js",
     "browser-sync": "./node_modules/browser-sync/bin/browser-sync.js start --files 'dist/bundle.js, index.html' --proxy 'http://localhost:8000'",
     "build": "./node_modules/watchify/bin/cmd.js -v -t babelify js/app.js -o dist/bundle.js",
-    "develop": "npm run local-ws & npm run browser-sync"
+    "develop": "npm run build & npm run local-ws & npm run browser-sync"
   },
   "author": "",
   "license": "MIT",
