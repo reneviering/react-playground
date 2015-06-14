@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "local-ws": "./node_modules/local-web-server/bin/ws.js",
+    "browser-sync": "./node_modules/browser-sync/bin/browser-sync.js start --files 'dist/bundle.js, index.html' --proxy 'http://localhost:8000'",
     "build": "./node_modules/watchify/bin/cmd.js -v -t babelify js/app.js -o dist/bundle.js",
-    "develop": "./node_modules/browser-sync/bin/browser-sync.js start --files 'dist/bundle.js, index.html' --proxy 'http://localhost:8000'"
+    "develop": "npm run local-ws & npm run browser-sync"
   },
   "author": "",
   "license": "MIT",
@@ -13,6 +15,7 @@
     "babelify": "^6.1.2",
     "browser-sync": "^2.7.10",
     "browserify": "^10.2.4",
+    "local-web-server": "^0.5.19",
     "react": "^0.13.3",
     "watchify": "^3.2.2"
   }
